@@ -4,10 +4,10 @@ const MODERN_ACTIVITY = 15;
 const HALF_LIFE_PERIOD = 5730;
 
 const isUndefined = (v) => v === undefined;
-const isString = (v) => typeof v != "string";
+const isString = (v) => typeof v === "string";
 const isZero = (v) => +v === 0;
 const isPositive = (v) => Math.sign(v) === 1;
-const isActivityInBound = (v) => +v > MODERN_ACTIVITY;
+const isActivityInBound = (v) => +v < MODERN_ACTIVITY;
 
 module.exports = function dateSample(sampleActivity) {
   if (
